@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Lock, Mail } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -8,9 +9,14 @@ import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { useLanguage } from "@/lib/i18n";
 
-export default function LoginPage() {
+ export default function LoginPage() {
   const { locale } = useLanguage();
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+  
   return (
     <main className="relative min-h-screen overflow-hidden">
       <div className="aurora" />
